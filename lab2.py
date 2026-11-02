@@ -27,7 +27,7 @@ def calculate_bmi(height, weight):
     if bmi < 18.5:
         print("BMI is underweight")
         classification = -1
-    elif bmi >= 18.5 and bmi < 24.9:
+    elif bmi >= 18.5 and bmi <= 25.0:
         print("BMI is normal weight")
         classification = 0
     else:
