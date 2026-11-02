@@ -1,20 +1,41 @@
 print("ET0735 (DevOps for AIoT) - Lab 2 - Introduction to Python")
+#for lab 2
+#def calculate_bmi(height, weight):
+    #print("Height = ", height)
+    #print("Weight = ",weight)
 
+    #bmi = weight / (height * height)
+    #print("value of bmi is: ", bmi)
+    #if bmi < 18.5:
+        #print("BMI is underweight")
+    #elif bmi >= 18.5 and bmi <24.9:
+        #print("BMI is normal weight")
+    #else:
+        #print("BMI is overweight")
+
+    #return bmi
+#*********************
+
+#for lab 3
 def calculate_bmi(height, weight):
     print("Height = ", height)
-    print("Weight = ",weight)
+    print("Weight = ", weight)
 
     bmi = weight / (height * height)
     print("value of bmi is: ", bmi)
+
     if bmi < 18.5:
         print("BMI is underweight")
-    elif bmi >= 18.5 and bmi <24.9:
+        classification = -1
+    elif bmi >= 18.5 and bmi < 24.9:
         print("BMI is normal weight")
+        classification = 0
     else:
         print("BMI is overweight")
+        classification = 1
 
-    return bmi
-
+    return bmi, classification
+#*******************
 def display_main_menu():
     print("Enter some numbers separated by commas (e.g. 5, 67, 32)")
 
@@ -47,12 +68,9 @@ def calc_median_temperature(num_list):
     sorted_list = sort_temperature(num_list)
     n = len(sorted_list)
     middle = n // 2
-
     if n % 2 == 1:
-        
         median = sorted_list[middle]
     else:
-        
         median = (sorted_list[middle - 1] + sorted_list[middle]) / 2
 
     return float(median)
